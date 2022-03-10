@@ -1,0 +1,1339 @@
+> use assignment
+switched to db assignment
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+web15   0.000GB
+> db.createCollection("users")
+{ "ok" : 1 }
+> show collections
+users
+> db.users.insert({"first_name":"sravani","last_name":"pyla","email":"sravani@gmail.com","gender":"female","ip_address":"127.12.323.32","age":26})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({"first_name":"sandhya","last_name":"pyla","email":"sandhya@gmail.com","gender":"female","ip_address":"117.12.322.31","age":25})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({"first_name":"swetha","last_name":"patnaik","email":"swetha@gmail.com","gender":"female","ip_address":"125.12.322.31","age":26})
+WriteResult({ "nInserted" : 1 })
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+> db.users.insertMany({"first_name":"Tulasi","last_name":"gudaparthi","email":"tulasi@gmail.com","gender":"female","ip_address":121.12.67.89,"age":19},{"first_name":"geethandra","last_name":"gudaparthi","email":"geethandra@gmail.com","femle":"male","ip_address":120.23.456.6789,"age":17})
+2022-03-10T06:39:06.306+0530 E  QUERY    [js] uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:132
+> db.users.insertMany({"first_name":"Tulasi","last_name":"gudaparthi","email":"tulasi@gmail.com","gender":"female","ip_address":"121.12.67.89","age":19},{"first_name":"geethandra","last_name":"gudaparthi","email":"geethandra@gmail.com","femle":"male","ip_address":"120.23.456.6789","age":17})
+2022-03-10T06:39:34.443+0530 E  QUERY    [js] uncaught exception: TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:307:17
+@(shell):1:1
+> db.users.insertMany([{"first_name":"Tulasi","last_name":"gudaparthi","email":"tulasi@gmail.com","gender":"female","ip_address":"121.12.67.89","age":19},{"first_name":"geethandra","last_name":"gudaparthi","email":"geethandra@gmail.com","femle":"male","ip_address":"120.23.456.6789","age":17}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622950251922c9ffdbc2c0fc"),
+                ObjectId("622950251922c9ffdbc2c0fd")
+        ]
+}
+> db.users.insertMany([{"first_name":"Tulasi","last_name":"gudaparthi","email":"tulasi@gmail.com","gender":"female","ip_address":121.12.67.89,"age":19},{"first_name":"geethandra","last_name":"gudaparthi","email":"geethandra@gmail.com","female":"male","ip_address":120.23.456.6789,"age":17}])
+2022-03-10T06:42:26.554+0530 E  QUERY    [js] uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:133
+> db.users.insertMany([{"first_name":"Tulasi","last_name":"gudaparthi","email":"tulasi@gmail.com","gender":"female","ip_address":"121.12.67.89","age":19},{"first_name":"geethandra","last_name":"gudaparthi","email":"geethandra@gmail.com","female":"male","ip_address":"120.23.456.6789","age":17}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6229509d1922c9ffdbc2c0fe"),
+                ObjectId("6229509d1922c9ffdbc2c0ff")
+        ]
+}
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+> db.users.insertMany([{"first_name":"madhu","last_name":"pyla","email":"madhu@gmail.com","gender":"male","ip_address":"118.11.67.289","age":20},{"first_name":"mahesh","last_name":"babu","email":"mahesh@gmail.com","female":"male","ip_address":"127.23.356.6789","age":37},{"first_name":"prabhas","last_name":"raju","email":"prabhas@gmail.com","female":"male","ip_address":"124.56.789","age":40}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622951e51922c9ffdbc2c100"),
+                ObjectId("622951e51922c9ffdbc2c101"),
+                ObjectId("622951e51922c9ffdbc2c102")
+        ]
+}
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+> db.users.insert({"first_name":"uma devi","last_name":"pyla","email":"uma@gmail.com","gender":"female","ip_address":"109.12.322.31","age":24})
+WriteResult({ "nInserted" : 1 })
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+> db.users.findOne({"age":24})
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+> db.users.findOne({"age":26})
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+> db.users.updateMany({"first_name":"hemanth"},{$set:{"last_name":"kumar","ip_address":"162.47.90.1345","age":22}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{
+        "_id" : ObjectId("622959c34b40e4c614fc5670"),
+        "first_name" : "hemanth",
+        "age" : 22,
+        "gender" : "male",
+        "ip_address" : "162.47.90.1345",
+        "last_name" : "kumar"
+}
+> db.students.remove({ "_id" : ObjectId("622950251922c9ffdbc2c0fd")})
+WriteResult({ "nRemoved" : 0 })
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{
+        "_id" : ObjectId("622959c34b40e4c614fc5670"),
+        "first_name" : "hemanth",
+        "age" : 22,
+        "gender" : "male",
+        "ip_address" : "162.47.90.1345",
+        "last_name" : "kumar"
+}
+> db.users.find({"name":"geethandra"})
+> db.users.find({"first_name":"geethandra"})
+{ "_id" : ObjectId("622950251922c9ffdbc2c0fd"), "first_name" : "geethandra", "last_name" : "gudaparthi", "email" : "geethandra@gmail.com", "femle" : "male", "ip_address" : "120.23.456.6789", "age" : 17 }
+{ "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"), "first_name" : "geethandra", "last_name" : "gudaparthi", "email" : "geethandra@gmail.com", "female" : "male", "ip_address" : "120.23.456.6789", "age" : 17 }
+> db.users.find({"first_name":"geethandra"}).pretty()
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "femle" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+> db.users.update({"_id":ObjectId("622950251922c9ffdbc2c0fd")},{$unset:{"femle":"male"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.find({"first_name":"geethandra"}).pretty()
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fd"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+> db.users.remove({"_id":ObjectId("622950251922c9ffdbc2c0fd")})
+WriteResult({ "nRemoved" : 1 })
+> db.users.find({"first_name":"geethandra"}).pretty()
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{
+        "_id" : ObjectId("622959c34b40e4c614fc5670"),
+        "first_name" : "hemanth",
+        "age" : 22,
+        "gender" : "male",
+        "ip_address" : "162.47.90.1345",
+        "last_name" : "kumar"
+}
+> db.users.deleteOne({"_id":ObjectId("622959c34b40e4c614fc5670")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"),
+        "first_name" : "sravani",
+        "last_name" : "pyla",
+        "email" : "sravani@gmail.com",
+        "gender" : "female",
+        "ip_address" : "127.12.323.32",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+> db.users.find({"age":24})
+{ "_id" : ObjectId("6229523b1922c9ffdbc2c103"), "first_name" : "uma devi", "last_name" : "pyla", "email" : "uma@gmail.com", "gender" : "female", "ip_address" : "109.12.322.31", "age" : 24 }
+{ "_id" : ObjectId("622957774b40e4c614fc566f"), "first_name" : "prashant", "email" : "prashant@gmail.com", "last_name" : "gupta", "age" : 24, "gender" : "male", "ip_address" : "123.67.90.1345" }
+> db.users.find({"age":26})
+{ "_id" : ObjectId("62294bc81922c9ffdbc2c0f9"), "first_name" : "sravani", "last_name" : "pyla", "email" : "sravani@gmail.com", "gender" : "female", "ip_address" : "127.12.323.32", "age" : 26 }
+{ "_id" : ObjectId("62294e411922c9ffdbc2c0fb"), "first_name" : "swetha", "last_name" : "patnaik", "email" : "swetha@gmail.com", "gender" : "female", "ip_address" : "125.12.322.31", "age" : 26 }
+> db.users.deleteOne({"age":26})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find({"age":26})
+{ "_id" : ObjectId("62294e411922c9ffdbc2c0fb"), "first_name" : "swetha", "last_name" : "patnaik", "email" : "swetha@gmail.com", "gender" : "female", "ip_address" : "125.12.322.31", "age" : 26 }
+> db.users.insert({"first_name":"sravani"})
+WriteResult({ "nInserted" : 1 })
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{ "_id" : ObjectId("622960784b40e4c614fc5671"), "first_name" : "sravani" }
+> db.users.insertMany([{"first_name":"sandhya"},{"first_name":"sravani"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622961664b40e4c614fc5672"),
+                ObjectId("622961664b40e4c614fc5673")
+        ]
+}
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{ "_id" : ObjectId("622960784b40e4c614fc5671"), "first_name" : "sravani" }
+{ "_id" : ObjectId("622961664b40e4c614fc5672"), "first_name" : "sandhya" }
+{ "_id" : ObjectId("622961664b40e4c614fc5673"), "first_name" : "sravani" }
+> db.users.find({"first_name":"sravani"}).pretty()
+{ "_id" : ObjectId("622960784b40e4c614fc5671"), "first_name" : "sravani" }
+{ "_id" : ObjectId("622961664b40e4c614fc5673"), "first_name" : "sravani" }
+> db.users.deleteMany({"first_name":"sravani"})
+{ "acknowledged" : true, "deletedCount" : 2 }
+> db.users.find({"first_name":"sravani"}).pretty()
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294df81922c9ffdbc2c0fa"),
+        "first_name" : "sandhya",
+        "last_name" : "pyla",
+        "email" : "sandhya@gmail.com",
+        "gender" : "female",
+        "ip_address" : "117.12.322.31",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{ "_id" : ObjectId("622961664b40e4c614fc5672"), "first_name" : "sandhya" }
+> db.users.deleteOne({"first_name":"sandhya"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
+{ "_id" : ObjectId("622961664b40e4c614fc5672"), "first_name" : "sandhya" }
+> db.users.delete({"first_name":"sandhya"})   
+2022-03-10T07:57:11.873+0530 E  QUERY    [js] uncaught exception: TypeError: db.users.delete is not a function :
+@(shell):1:1
+> db.users.remove({"first_name":"sandhya"})
+WriteResult({ "nRemoved" : 1 })
+> db.users.remove({"first_name":"sandhya"})
+WriteResult({ "nRemoved" : 0 })
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("62294e411922c9ffdbc2c0fb"),
+        "first_name" : "swetha",
+        "last_name" : "patnaik",
+        "email" : "swetha@gmail.com",
+        "gender" : "female",
+        "ip_address" : "125.12.322.31",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622950251922c9ffdbc2c0fc"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0fe"),
+        "first_name" : "Tulasi",
+        "last_name" : "gudaparthi",
+        "email" : "tulasi@gmail.com",
+        "gender" : "female",
+        "ip_address" : "121.12.67.89",
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6229509d1922c9ffdbc2c0ff"),
+        "first_name" : "geethandra",
+        "last_name" : "gudaparthi",
+        "email" : "geethandra@gmail.com",
+        "female" : "male",
+        "ip_address" : "120.23.456.6789",
+        "age" : 17
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c100"),
+        "first_name" : "madhu",
+        "last_name" : "pyla",
+        "email" : "madhu@gmail.com",
+        "gender" : "male",
+        "ip_address" : "118.11.67.289",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c101"),
+        "first_name" : "mahesh",
+        "last_name" : "babu",
+        "email" : "mahesh@gmail.com",
+        "female" : "male",
+        "ip_address" : "127.23.356.6789",
+        "age" : 37
+}
+{
+        "_id" : ObjectId("622951e51922c9ffdbc2c102"),
+        "first_name" : "prabhas",
+        "last_name" : "raju",
+        "email" : "prabhas@gmail.com",
+        "female" : "male",
+        "ip_address" : "124.56.789",
+        "age" : 40
+}
+{
+        "_id" : ObjectId("6229523b1922c9ffdbc2c103"),
+        "first_name" : "uma devi",
+        "last_name" : "pyla",
+        "email" : "uma@gmail.com",
+        "gender" : "female",
+        "ip_address" : "109.12.322.31",
+        "age" : 24
+}
+{
+        "_id" : ObjectId("622957774b40e4c614fc566f"),
+        "first_name" : "prashant",
+        "email" : "prashant@gmail.com",
+        "last_name" : "gupta",
+        "age" : 24,
+        "gender" : "male",
+        "ip_address" : "123.67.90.1345"
+}
