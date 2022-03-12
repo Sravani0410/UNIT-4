@@ -1,0 +1,2153 @@
+> use assignment
+switched to db assignment
+> db.createCollection("movies")
+{ "ok" : 1 }
+> show collections
+movies
+> db.movies.find({}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4aa"),
+        "id" : 1,
+        "movie_name" : "This Is England",
+        "movie_genere" : "Drama",
+        "production_year" : 1996,
+        "budget" : 12587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b0"),
+        "id" : 7,
+        "movie_name" : "The Stone Council",
+        "movie_genere" : "Adventure|Crime|Drama|Fantasy|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 12508
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b2"),
+        "id" : 9,
+        "movie_name" : "Love's Labour's Lost",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 14167
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b3"),
+        "id" : 10,
+        "movie_name" : "Massacre Canyon",
+        "movie_genere" : "Western",
+        "production_year" : 1991,
+        "budget" : 10431
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b4"),
+        "id" : 11,
+        "movie_name" : "Oh My God",
+        "movie_genere" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10079
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b6"),
+        "id" : 13,
+        "movie_name" : "Diana",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 10958
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b7"),
+        "id" : 14,
+        "movie_name" : "You've Got Mail",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 18385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b8"),
+        "id" : 15,
+        "movie_name" : "Dead Man Walking",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 18133
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ba"),
+        "id" : 17,
+        "movie_name" : "Young People Fucking (a.k.a. YPF)",
+        "movie_genere" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 12375
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bb"),
+        "id" : 18,
+        "movie_name" : "13 Fighting Men",
+        "movie_genere" : "Western",
+        "production_year" : 1994,
+        "budget" : 16051
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bc"),
+        "id" : 19,
+        "movie_name" : "Rocaterrania",
+        "movie_genere" : "Documentary|Fantasy",
+        "production_year" : 1997,
+        "budget" : 12385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bd"),
+        "id" : 20,
+        "movie_name" : "The Four Feathers",
+        "movie_genere" : "Adventure|Drama|Romance|War",
+        "production_year" : 1999,
+        "budget" : 17587
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4be"),
+        "id" : 21,
+        "movie_name" : "Song of the Little Road (Pather Panchali)",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19701
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bf"),
+        "id" : 22,
+        "movie_name" : "Mr. Wonderful",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2007,
+        "budget" : 13966
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c0"),
+        "id" : 23,
+        "movie_name" : "Two Men Went to War",
+        "movie_genere" : "Comedy|War",
+        "production_year" : 2001,
+        "budget" : 18208
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c1"),
+        "id" : 24,
+        "movie_name" : "Home of Our Own, A",
+        "movie_genere" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c2"),
+        "id" : 25,
+        "movie_name" : "Interview with the Assassin",
+        "movie_genere" : "Drama",
+        "production_year" : 1992,
+        "budget" : 16594
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c3"),
+        "id" : 26,
+        "movie_name" : "The Diary of a Teenage Girl",
+        "movie_genere" : "Drama",
+        "production_year" : 1990,
+        "budget" : 10547
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c4"),
+        "id" : 27,
+        "movie_name" : "Waking Life",
+        "movie_genere" : "Animation|Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 9136
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c5"),
+        "id" : 28,
+        "movie_name" : "Facing the Giants",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 1997,
+        "budget" : 18944
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c6"),
+        "id" : 29,
+        "movie_name" : "Cat o' Nine Tails, The (Gatto a nove code, Il)",
+        "movie_genere" : "Mystery|Thriller",
+        "production_year" : 2013,
+        "budget" : 17119
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c7"),
+        "id" : 30,
+        "movie_name" : "Clapham Junction",
+        "movie_genere" : "Drama",
+        "production_year" : 2011,
+        "budget" : 19711
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c8"),
+        "id" : 31,
+        "movie_name" : "Judy Moody and the Not Bummer Summer",
+        "movie_genere" : "Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 10695
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c9"),
+        "id" : 32,
+        "movie_name" : "Loss of a Teardrop Diamond, The",
+        "movie_genere" : "Drama",
+        "production_year" : 2017,
+        "budget" : 15197
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ca"),
+        "id" : 33,
+        "movie_name" : "Prayer for the Dying, A",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 2011,
+        "budget" : 17970
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cb"),
+        "id" : 34,
+        "movie_name" : "Saps at Sea",
+        "movie_genere" : "Comedy",
+        "production_year" : 2013,
+        "budget" : 15385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cc"),
+        "id" : 35,
+        "movie_name" : "Healing",
+        "movie_genere" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14759
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cd"),
+        "id" : 36,
+        "movie_name" : "Frozen Planet",
+        "movie_genere" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 14989
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ce"),
+        "id" : 37,
+        "movie_name" : "Grandma's Boy",
+        "movie_genere" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 17345
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cf"),
+        "id" : 38,
+        "movie_name" : "Barchester Chronicles, The",
+        "movie_genere" : "Drama",
+        "production_year" : 1991,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d0"),
+        "id" : 39,
+        "movie_name" : "Jarhead 2: Field of Fire",
+        "movie_genere" : "Action|Drama|War",
+        "production_year" : 1991,
+        "budget" : 9712
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d1"),
+        "id" : 40,
+        "movie_name" : "Gun the Man Down",
+        "movie_genere" : "Western",
+        "production_year" : 1995,
+        "budget" : 13400
+}
+Type "it" for more
+
+//find all movies which are equal to movie_name
+
+> db.movies.find({"movie_name":{$eq:"12th & Delaware"}})
+{ "_id" : ObjectId("622aa65d6c8f88488823b54c"), "id" : 163, "movie_name" : "12th & Delaware", "movie_genere" : "Documentary", "production_year" : 2011, "budget" : 10169 }
+
+//find all movies which are not equal to movie_name
+
+> db.movies.find({"movie_name":{$ne:"Benny & Joon"}}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4aa"),
+        "id" : 1,
+        "movie_name" : "This Is England",
+        "movie_genere" : "Drama",
+        "production_year" : 1996,
+        "budget" : 12587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b0"),
+        "id" : 7,
+        "movie_name" : "The Stone Council",
+        "movie_genere" : "Adventure|Crime|Drama|Fantasy|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 12508
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b2"),
+        "id" : 9,
+        "movie_name" : "Love's Labour's Lost",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 14167
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b3"),
+        "id" : 10,
+        "movie_name" : "Massacre Canyon",
+        "movie_genere" : "Western",
+        "production_year" : 1991,
+        "budget" : 10431
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b4"),
+        "id" : 11,
+        "movie_name" : "Oh My God",
+        "movie_genere" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10079
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b6"),
+        "id" : 13,
+        "movie_name" : "Diana",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 10958
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b7"),
+        "id" : 14,
+        "movie_name" : "You've Got Mail",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 18385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b8"),
+        "id" : 15,
+        "movie_name" : "Dead Man Walking",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 18133
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ba"),
+        "id" : 17,
+        "movie_name" : "Young People Fucking (a.k.a. YPF)",
+        "movie_genere" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 12375
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bb"),
+        "id" : 18,
+        "movie_name" : "13 Fighting Men",
+        "movie_genere" : "Western",
+        "production_year" : 1994,
+        "budget" : 16051
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bc"),
+        "id" : 19,
+        "movie_name" : "Rocaterrania",
+        "movie_genere" : "Documentary|Fantasy",
+        "production_year" : 1997,
+        "budget" : 12385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bd"),
+        "id" : 20,
+        "movie_name" : "The Four Feathers",
+        "movie_genere" : "Adventure|Drama|Romance|War",
+        "production_year" : 1999,
+        "budget" : 17587
+}
+Type "it" for more
+
+//find all movies greater than and greater than equal to a budget
+
+>db.movies.find({$and:[{budget:{$gt:10500}},{budget:{$gte:10500}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4aa"),
+        "id" : 1,
+        "movie_name" : "This Is England",
+        "movie_genere" : "Drama",
+        "production_year" : 1996,
+        "budget" : 12587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b0"),
+        "id" : 7,
+        "movie_name" : "The Stone Council",
+        "movie_genere" : "Adventure|Crime|Drama|Fantasy|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 12508
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b2"),
+        "id" : 9,
+        "movie_name" : "Love's Labour's Lost",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 14167
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b6"),
+        "id" : 13,
+        "movie_name" : "Diana",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 10958
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b7"),
+        "id" : 14,
+        "movie_name" : "You've Got Mail",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 18385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b8"),
+        "id" : 15,
+        "movie_name" : "Dead Man Walking",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 18133
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ba"),
+        "id" : 17,
+        "movie_name" : "Young People Fucking (a.k.a. YPF)",
+        "movie_genere" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 12375
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bb"),
+        "id" : 18,
+        "movie_name" : "13 Fighting Men",
+        "movie_genere" : "Western",
+        "production_year" : 1994,
+        "budget" : 16051
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bc"),
+        "id" : 19,
+        "movie_name" : "Rocaterrania",
+        "movie_genere" : "Documentary|Fantasy",
+        "production_year" : 1997,
+        "budget" : 12385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bd"),
+        "id" : 20,
+        "movie_name" : "The Four Feathers",
+        "movie_genere" : "Adventure|Drama|Romance|War",
+        "production_year" : 1999,
+        "budget" : 17587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4be"),
+        "id" : 21,
+        "movie_name" : "Song of the Little Road (Pather Panchali)",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19701
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bf"),
+        "id" : 22,
+        "movie_name" : "Mr. Wonderful",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2007,
+        "budget" : 13966
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c0"),
+        "id" : 23,
+        "movie_name" : "Two Men Went to War",
+        "movie_genere" : "Comedy|War",
+        "production_year" : 2001,
+        "budget" : 18208
+}
+Type "it" for more
+>
+//find all movies less than and less than equal to a budget
+
+> db.movies.find({$and:[{budget:{$lt:9500}},{budget:{$lte:9500}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c4"),
+        "id" : 27,
+        "movie_name" : "Waking Life",
+        "movie_genere" : "Animation|Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 9136
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b50e"),
+        "id" : 101,
+        "movie_name" : "Thor",
+        "movie_genere" : "Action|Adventure|Drama|Fantasy|IMAX",
+        "production_year" : 2003,
+        "budget" : 9337
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b53c"),
+        "id" : 147,
+        "movie_name" : "State of Play",
+        "movie_genere" : "Crime|Drama|Thriller",
+        "production_year" : 2012,
+        "budget" : 9411
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b54a"),
+        "id" : 161,
+        "movie_name" : "Stormbreaker (Alex Rider: Operation Stormbreaker)",
+        "movie_genere" : "Action|Children",
+        "production_year" : 2013,
+        "budget" : 9487
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b571"),
+        "id" : 200,
+        "movie_name" : "Robber, The (Der Räuber)",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 9003
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b577"),
+        "id" : 206,
+        "movie_name" : "Barenaked in America",
+        "movie_genere" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 9266
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b58e"),
+        "id" : 229,
+        "movie_name" : "Vertigo",
+        "movie_genere" : "Drama|Mystery|Romance|Thriller",
+        "production_year" : 2016,
+        "budget" : 9323
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b597"),
+        "id" : 238,
+        "movie_name" : "Mortuary",
+        "movie_genere" : "Horror|Mystery|Thriller",
+        "production_year" : 1999,
+        "budget" : 9063
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b599"),
+        "id" : 240,
+        "movie_name" : "In Her Shoes",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : 9404
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b59d"),
+        "id" : 244,
+        "movie_name" : "Seinto Seiya: Legend of Sanctuary (Seinto Seiya: Legend of Sanctuary)",
+        "movie_genere" : "Animation",
+        "production_year" : 1998,
+        "budget" : 9114
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5e6"),
+        "id" : 317,
+        "movie_name" : "Tough Ones, The (Häjyt)",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 2000,
+        "budget" : 9162
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5fa"),
+        "id" : 337,
+        "movie_name" : "Monsterman (Monsterimies)",
+        "movie_genere" : "Documentary|Drama",
+        "production_year" : 2007,
+        "budget" : 9396
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5fd"),
+        "id" : 340,
+        "movie_name" : "How to Succeed in Business Without Really Trying",
+        "movie_genere" : "Comedy|Musical",
+        "production_year" : 2009,
+        "budget" : 9036
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b607"),
+        "id" : 350,
+        "movie_name" : "Happy End",
+        "movie_genere" : "Drama",
+        "production_year" : 2015,
+        "budget" : 9016
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b618"),
+        "id" : 367,
+        "movie_name" : "Sommersby",
+        "movie_genere" : "Drama|Mystery|Romance",
+        "production_year" : 2000,
+        "budget" : 9066
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b61b"),
+        "id" : 370,
+        "movie_name" : "Full Moon in Paris (Les nuits de la pleine lune)",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 9436
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b65d"),
+        "id" : 436,
+        "movie_name" : "Throw Down (Yau doh lung fu bong)",
+        "movie_genere" : "Drama",
+        "production_year" : 2010,
+        "budget" : 9374
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b67a"),
+        "id" : 465,
+        "movie_name" : "The Broken Jug",
+        "movie_genere" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 9368
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b682"),
+        "id" : 473,
+        "movie_name" : "Lady for a Day",
+        "movie_genere" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 9029
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b68a"),
+        "id" : 481,
+        "movie_name" : "Student of Prague, The (a.k.a. Bargain with Satan, A) (Student von Prag, Der)",
+        "movie_genere" : "Drama|Horror",
+        "production_year" : 2017,
+        "budget" : 9290
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b69b"),
+        "id" : 498,
+        "movie_name" : "I Am Taraneh, I Am Fifteen Years Old (Man, taraneh, panzdah sal daram)",
+        "movie_genere" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9369
+}
+
+//find all movies that are produced after 2000 with budget greater than 10000
+
+> db.movies.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b4"),
+        "id" : 11,
+        "movie_name" : "Oh My God",
+        "movie_genere" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10079
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4be"),
+        "id" : 21,
+        "movie_name" : "Song of the Little Road (Pather Panchali)",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19701
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bf"),
+        "id" : 22,
+        "movie_name" : "Mr. Wonderful",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2007,
+        "budget" : 13966
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c0"),
+        "id" : 23,
+        "movie_name" : "Two Men Went to War",
+        "movie_genere" : "Comedy|War",
+        "production_year" : 2001,
+        "budget" : 18208
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c1"),
+        "id" : 24,
+        "movie_name" : "Home of Our Own, A",
+        "movie_genere" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c6"),
+        "id" : 29,
+        "movie_name" : "Cat o' Nine Tails, The (Gatto a nove code, Il)",
+        "movie_genere" : "Mystery|Thriller",
+        "production_year" : 2013,
+        "budget" : 17119
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c7"),
+        "id" : 30,
+        "movie_name" : "Clapham Junction",
+        "movie_genere" : "Drama",
+        "production_year" : 2011,
+        "budget" : 19711
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c8"),
+        "id" : 31,
+        "movie_name" : "Judy Moody and the Not Bummer Summer",
+        "movie_genere" : "Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 10695
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c9"),
+        "id" : 32,
+        "movie_name" : "Loss of a Teardrop Diamond, The",
+        "movie_genere" : "Drama",
+        "production_year" : 2017,
+        "budget" : 15197
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ca"),
+        "id" : 33,
+        "movie_name" : "Prayer for the Dying, A",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 2011,
+        "budget" : 17970
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cb"),
+        "id" : 34,
+        "movie_name" : "Saps at Sea",
+        "movie_genere" : "Comedy",
+        "production_year" : 2013,
+        "budget" : 15385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cc"),
+        "id" : 35,
+        "movie_name" : "Healing",
+        "movie_genere" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14759
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cd"),
+        "id" : 36,
+        "movie_name" : "Frozen Planet",
+        "movie_genere" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 14989
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ce"),
+        "id" : 37,
+        "movie_name" : "Grandma's Boy",
+        "movie_genere" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 17345
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d2"),
+        "id" : 41,
+        "movie_name" : "My Dog Tulip",
+        "movie_genere" : "Animation|Drama",
+        "production_year" : 2001,
+        "budget" : 10171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d4"),
+        "id" : 43,
+        "movie_name" : "Revolution",
+        "movie_genere" : "Adventure|Drama|War",
+        "production_year" : 2004,
+        "budget" : 10609
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d6"),
+        "id" : 45,
+        "movie_name" : "Nazarin (Nazarín)",
+        "movie_genere" : "Drama",
+        "production_year" : 2020,
+        "budget" : 17964
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d8"),
+        "id" : 47,
+        "movie_name" : "The Gilded Cage",
+        "movie_genere" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 18116
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d9"),
+        "id" : 48,
+        "movie_name" : "Tape",
+        "movie_genere" : "Drama",
+        "production_year" : 2012,
+        "budget" : 14596
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4dc"),
+        "id" : 51,
+        "movie_name" : "Hellraiser: Revelations",
+        "movie_genere" : "Horror",
+        "production_year" : 2006,
+        "budget" : 17788
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4dd"),
+        "id" : 52,
+        "movie_name" : "Only the Strong Survive - A Celebration of Soul",
+        "movie_genere" : "Documentary|Musical",
+        "production_year" : 2018,
+        "budget" : 18553
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e0"),
+        "id" : 55,
+        "movie_name" : "Alien Abduction",
+        "movie_genere" : "Horror|Mystery|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 15771
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e1"),
+        "id" : 56,
+        "movie_name" : "Crime of Passion",
+        "movie_genere" : "Crime|Drama|Film-Noir",
+        "production_year" : 2017,
+        "budget" : 12302
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e5"),
+        "id" : 60,
+        "movie_name" : "My Sucky Teen Romance",
+        "movie_genere" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 18123
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e7"),
+        "id" : 62,
+        "movie_name" : "Pride and Glory",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 2006,
+        "budget" : 10279
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e8"),
+        "id" : 63,
+        "movie_name" : "Because of Winn-Dixie",
+        "movie_genere" : "Children|Comedy|Drama",
+        "production_year" : 2005,
+        "budget" : 13936
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e9"),
+        "id" : 64,
+        "movie_name" : "Rainmaker, The",
+        "movie_genere" : "Comedy|Romance|Thriller|Western",
+        "production_year" : 2009,
+        "budget" : 12319
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4eb"),
+        "id" : 66,
+        "movie_name" : "Live Music",
+        "movie_genere" : "Animation",
+        "production_year" : 2020,
+        "budget" : 12108
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ec"),
+        "id" : 67,
+        "movie_name" : "Professor Layton and the Eternal Diva (Eiga Reiton-kyôju to eien no utahime)",
+        "movie_genere" : "Action|Adventure|Animation|Mystery|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 16068
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ed"),
+        "id" : 68,
+        "movie_name" : "Mighty, The",
+        "movie_genere" : "Drama",
+        "production_year" : 2008,
+        "budget" : 10350
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ee"),
+        "id" : 69,
+        "movie_name" : "Rustlers' Rhapsody",
+        "movie_genere" : "Comedy|Western",
+        "production_year" : 2006,
+        "budget" : 19359
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4f1"),
+        "id" : 72,
+        "movie_name" : "'Round Midnight",
+        "movie_genere" : "Drama|Musical",
+        "production_year" : 2007,
+        "budget" : 15007
+}
+Type "it" for more
+
+//find all movies that are produced after 2000 or budget greater than 10000
+
+> db.movies.find({$or:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4aa"),
+        "id" : 1,
+        "movie_name" : "This Is England",
+        "movie_genere" : "Drama",
+        "production_year" : 1996,
+        "budget" : 12587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b0"),
+        "id" : 7,
+        "movie_name" : "The Stone Council",
+        "movie_genere" : "Adventure|Crime|Drama|Fantasy|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 12508
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b2"),
+        "id" : 9,
+        "movie_name" : "Love's Labour's Lost",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 14167
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b3"),
+        "id" : 10,
+        "movie_name" : "Massacre Canyon",
+        "movie_genere" : "Western",
+        "production_year" : 1991,
+        "budget" : 10431
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b4"),
+        "id" : 11,
+        "movie_name" : "Oh My God",
+        "movie_genere" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10079
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b6"),
+        "id" : 13,
+        "movie_name" : "Diana",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 10958
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b7"),
+        "id" : 14,
+        "movie_name" : "You've Got Mail",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 18385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b8"),
+        "id" : 15,
+        "movie_name" : "Dead Man Walking",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 18133
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ba"),
+        "id" : 17,
+        "movie_name" : "Young People Fucking (a.k.a. YPF)",
+        "movie_genere" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 12375
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bb"),
+        "id" : 18,
+        "movie_name" : "13 Fighting Men",
+        "movie_genere" : "Western",
+        "production_year" : 1994,
+        "budget" : 16051
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bc"),
+        "id" : 19,
+        "movie_name" : "Rocaterrania",
+        "movie_genere" : "Documentary|Fantasy",
+        "production_year" : 1997,
+        "budget" : 12385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bd"),
+        "id" : 20,
+        "movie_name" : "The Four Feathers",
+        "movie_genere" : "Adventure|Drama|Romance|War",
+        "production_year" : 1999,
+        "budget" : 17587
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4be"),
+        "id" : 21,
+        "movie_name" : "Song of the Little Road (Pather Panchali)",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19701
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bf"),
+        "id" : 22,
+        "movie_name" : "Mr. Wonderful",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2007,
+        "budget" : 13966
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c0"),
+        "id" : 23,
+        "movie_name" : "Two Men Went to War",
+        "movie_genere" : "Comedy|War",
+        "production_year" : 2001,
+        "budget" : 18208
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c1"),
+        "id" : 24,
+        "movie_name" : "Home of Our Own, A",
+        "movie_genere" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c2"),
+        "id" : 25,
+        "movie_name" : "Interview with the Assassin",
+        "movie_genere" : "Drama",
+        "production_year" : 1992,
+        "budget" : 16594
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c3"),
+        "id" : 26,
+        "movie_name" : "The Diary of a Teenage Girl",
+        "movie_genere" : "Drama",
+        "production_year" : 1990,
+        "budget" : 10547
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c4"),
+        "id" : 27,
+        "movie_name" : "Waking Life",
+        "movie_genere" : "Animation|Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 9136
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c5"),
+        "id" : 28,
+        "movie_name" : "Facing the Giants",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 1997,
+        "budget" : 18944
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c6"),
+        "id" : 29,
+        "movie_name" : "Cat o' Nine Tails, The (Gatto a nove code, Il)",
+        "movie_genere" : "Mystery|Thriller",
+        "production_year" : 2013,
+        "budget" : 17119
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c7"),
+        "id" : 30,
+        "movie_name" : "Clapham Junction",
+        "movie_genere" : "Drama",
+        "production_year" : 2011,
+        "budget" : 19711
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c8"),
+        "id" : 31,
+        "movie_name" : "Judy Moody and the Not Bummer Summer",
+        "movie_genere" : "Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 10695
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c9"),
+        "id" : 32,
+        "movie_name" : "Loss of a Teardrop Diamond, The",
+        "movie_genere" : "Drama",
+        "production_year" : 2017,
+        "budget" : 15197
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ca"),
+        "id" : 33,
+        "movie_name" : "Prayer for the Dying, A",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 2011,
+        "budget" : 17970
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cb"),
+        "id" : 34,
+        "movie_name" : "Saps at Sea",
+        "movie_genere" : "Comedy",
+        "production_year" : 2013,
+        "budget" : 15385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cc"),
+        "id" : 35,
+        "movie_name" : "Healing",
+        "movie_genere" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14759
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cd"),
+        "id" : 36,
+        "movie_name" : "Frozen Planet",
+        "movie_genere" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 14989
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ce"),
+        "id" : 37,
+        "movie_name" : "Grandma's Boy",
+        "movie_genere" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 17345
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cf"),
+        "id" : 38,
+        "movie_name" : "Barchester Chronicles, The",
+        "movie_genere" : "Drama",
+        "production_year" : 1991,
+        "budget" : 10329
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d1"),
+        "id" : 40,
+        "movie_name" : "Gun the Man Down",
+        "movie_genere" : "Western",
+        "production_year" : 1995,
+        "budget" : 13400
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d2"),
+        "id" : 41,
+        "movie_name" : "My Dog Tulip",
+        "movie_genere" : "Animation|Drama",
+        "production_year" : 2001,
+        "budget" : 10171
+}
+Type "it" for more
+
+//find all movies that are neither produced after 2000 nor with budget greater than 10000.
+
+> db.movies.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d0"),
+        "id" : 39,
+        "movie_name" : "Jarhead 2: Field of Fire",
+        "movie_genere" : "Action|Drama|War",
+        "production_year" : 1991,
+        "budget" : 9712
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e4"),
+        "id" : 59,
+        "movie_name" : "Inside Llewyn Davis",
+        "movie_genere" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9826
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b541"),
+        "id" : 152,
+        "movie_name" : "Divorce, Le",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 9859
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b56b"),
+        "id" : 194,
+        "movie_name" : "Whatever Lola Wants",
+        "movie_genere" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9887
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b571"),
+        "id" : 200,
+        "movie_name" : "Robber, The (Der Räuber)",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 9003
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b577"),
+        "id" : 206,
+        "movie_name" : "Barenaked in America",
+        "movie_genere" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 9266
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b597"),
+        "id" : 238,
+        "movie_name" : "Mortuary",
+        "movie_genere" : "Horror|Mystery|Thriller",
+        "production_year" : 1999,
+        "budget" : 9063
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b59d"),
+        "id" : 244,
+        "movie_name" : "Seinto Seiya: Legend of Sanctuary (Seinto Seiya: Legend of Sanctuary)",
+        "movie_genere" : "Animation",
+        "production_year" : 1998,
+        "budget" : 9114
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5a4"),
+        "id" : 251,
+        "movie_name" : "Monkey's Tale, A (Château des singes, Le)",
+        "movie_genere" : "Animation|Children",
+        "production_year" : 1990,
+        "budget" : 9821
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5dd"),
+        "id" : 308,
+        "movie_name" : "A Patriotic Man",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 1996,
+        "budget" : 9798
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b5e6"),
+        "id" : 317,
+        "movie_name" : "Tough Ones, The (Häjyt)",
+        "movie_genere" : "Action|Drama",
+        "production_year" : 2000,
+        "budget" : 9162
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b618"),
+        "id" : 367,
+        "movie_name" : "Sommersby",
+        "movie_genere" : "Drama|Mystery|Romance",
+        "production_year" : 2000,
+        "budget" : 9066
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b67b"),
+        "id" : 466,
+        "movie_name" : "Gold Diggers of 1935",
+        "movie_genere" : "Comedy|Musical",
+        "production_year" : 2000,
+        "budget" : 9743
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b682"),
+        "id" : 473,
+        "movie_name" : "Lady for a Day",
+        "movie_genere" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 9029
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b69b"),
+        "id" : 498,
+        "movie_name" : "I Am Taraneh, I Am Fifteen Years Old (Man, taraneh, panzdah sal daram)",
+        "movie_genere" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9369
+}
+
+//find all movies that are not produced in 2000 or they do not have budget of 10000.
+
+> db.movies.find({$or:[{production_year:{$ne:2000}},{budget:{$not:{$gt:10000}}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4aa"),
+        "id" : 1,
+        "movie_name" : "This Is England",
+        "movie_genere" : "Drama",
+        "production_year" : 1996,
+        "budget" : 12587
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ad"),
+        "id" : 4,
+        "movie_name" : "About Last Night",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2019,
+        "budget" : 18257
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ae"),
+        "id" : 5,
+        "movie_name" : "Made for Each Other",
+        "movie_genere" : "Comedy|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : 15171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4af"),
+        "id" : 6,
+        "movie_name" : "Friendship!",
+        "movie_genere" : "Comedy",
+        "production_year" : 2016,
+        "budget" : 11280
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b0"),
+        "id" : 7,
+        "movie_name" : "The Stone Council",
+        "movie_genere" : "Adventure|Crime|Drama|Fantasy|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 12508
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b1"),
+        "id" : 8,
+        "movie_name" : "Kommissarie Späck",
+        "movie_genere" : "Comedy",
+        "production_year" : 2018,
+        "budget" : 14286
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b2"),
+        "id" : 9,
+        "movie_name" : "Love's Labour's Lost",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 14167
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b3"),
+        "id" : 10,
+        "movie_name" : "Massacre Canyon",
+        "movie_genere" : "Western",
+        "production_year" : 1991,
+        "budget" : 10431
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b4"),
+        "id" : 11,
+        "movie_name" : "Oh My God",
+        "movie_genere" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10079
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b5"),
+        "id" : 12,
+        "movie_name" : "Herr Lehmann",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : 10709
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b6"),
+        "id" : 13,
+        "movie_name" : "Diana",
+        "movie_genere" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 10958
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b7"),
+        "id" : 14,
+        "movie_name" : "You've Got Mail",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : 18385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b8"),
+        "id" : 15,
+        "movie_name" : "Dead Man Walking",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 1999,
+        "budget" : 18133
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ba"),
+        "id" : 17,
+        "movie_name" : "Young People Fucking (a.k.a. YPF)",
+        "movie_genere" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 12375
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bb"),
+        "id" : 18,
+        "movie_name" : "13 Fighting Men",
+        "movie_genere" : "Western",
+        "production_year" : 1994,
+        "budget" : 16051
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bc"),
+        "id" : 19,
+        "movie_name" : "Rocaterrania",
+        "movie_genere" : "Documentary|Fantasy",
+        "production_year" : 1997,
+        "budget" : 12385
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bd"),
+        "id" : 20,
+        "movie_name" : "The Four Feathers",
+        "movie_genere" : "Adventure|Drama|Romance|War",
+        "production_year" : 1999,
+        "budget" : 17587
+}
+Type "it" for more
+
+//find all movies that were produced from 2000 to 2010.
+
+> db.movies.find({$and:[{production_year:{$gte:2000}},{production_year:{$lte:2010}}]}).pretty()
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ab"),
+        "id" : 2,
+        "movie_name" : "Hallelujah I'm a Bum",
+        "movie_genere" : "Musical",
+        "production_year" : 2010,
+        "budget" : 13017
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ac"),
+        "id" : 3,
+        "movie_name" : "Stockholm East (Stockholm Östra)",
+        "movie_genere" : "Drama",
+        "production_year" : 2006,
+        "budget" : 13929
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4b9"),
+        "id" : 16,
+        "movie_name" : "Jesus of Montreal (Jésus de Montréal)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4be"),
+        "id" : 21,
+        "movie_name" : "Song of the Little Road (Pather Panchali)",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19701
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4bf"),
+        "id" : 22,
+        "movie_name" : "Mr. Wonderful",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2007,
+        "budget" : 13966
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c0"),
+        "id" : 23,
+        "movie_name" : "Two Men Went to War",
+        "movie_genere" : "Comedy|War",
+        "production_year" : 2001,
+        "budget" : 18208
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c1"),
+        "id" : 24,
+        "movie_name" : "Home of Our Own, A",
+        "movie_genere" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4c4"),
+        "id" : 27,
+        "movie_name" : "Waking Life",
+        "movie_genere" : "Animation|Drama|Fantasy",
+        "production_year" : 2003,
+        "budget" : 9136
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cc"),
+        "id" : 35,
+        "movie_name" : "Healing",
+        "movie_genere" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14759
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4cd"),
+        "id" : 36,
+        "movie_name" : "Frozen Planet",
+        "movie_genere" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 14989
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ce"),
+        "id" : 37,
+        "movie_name" : "Grandma's Boy",
+        "movie_genere" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 17345
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d2"),
+        "id" : 41,
+        "movie_name" : "My Dog Tulip",
+        "movie_genere" : "Animation|Drama",
+        "production_year" : 2001,
+        "budget" : 10171
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4d4"),
+        "id" : 43,
+        "movie_name" : "Revolution",
+        "movie_genere" : "Adventure|Drama|War",
+        "production_year" : 2004,
+        "budget" : 10609
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4dc"),
+        "id" : 51,
+        "movie_name" : "Hellraiser: Revelations",
+        "movie_genere" : "Horror",
+        "production_year" : 2006,
+        "budget" : 17788
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e0"),
+        "id" : 55,
+        "movie_name" : "Alien Abduction",
+        "movie_genere" : "Horror|Mystery|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 15771
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e7"),
+        "id" : 62,
+        "movie_name" : "Pride and Glory",
+        "movie_genere" : "Crime|Drama",
+        "production_year" : 2006,
+        "budget" : 10279
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e8"),
+        "id" : 63,
+        "movie_name" : "Because of Winn-Dixie",
+        "movie_genere" : "Children|Comedy|Drama",
+        "production_year" : 2005,
+        "budget" : 13936
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4e9"),
+        "id" : 64,
+        "movie_name" : "Rainmaker, The",
+        "movie_genere" : "Comedy|Romance|Thriller|Western",
+        "production_year" : 2009,
+        "budget" : 12319
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ed"),
+        "id" : 68,
+        "movie_name" : "Mighty, The",
+        "movie_genere" : "Drama",
+        "production_year" : 2008,
+        "budget" : 10350
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ee"),
+        "id" : 69,
+        "movie_name" : "Rustlers' Rhapsody",
+        "movie_genere" : "Comedy|Western",
+        "production_year" : 2006,
+        "budget" : 19359
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4f1"),
+        "id" : 72,
+        "movie_name" : "'Round Midnight",
+        "movie_genere" : "Drama|Musical",
+        "production_year" : 2007,
+        "budget" : 15007
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4fb"),
+        "id" : 82,
+        "movie_name" : "Life as We Know It",
+        "movie_genere" : "Comedy|Romance",
+        "production_year" : 2009,
+        "budget" : 18497
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4fc"),
+        "id" : 83,
+        "movie_name" : "Zebrahead",
+        "movie_genere" : "Drama",
+        "production_year" : 2009,
+        "budget" : 11830
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4fe"),
+        "id" : 85,
+        "movie_name" : "Man of Her Dreams (a.k.a. The Fiancé)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 9892
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b4ff"),
+        "id" : 86,
+        "movie_name" : "Pebble and the Penguin, The",
+        "movie_genere" : "Animation|Musical",
+        "production_year" : 2009,
+        "budget" : 10887
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b500"),
+        "id" : 87,
+        "movie_name" : "Mad Miss Manton, The",
+        "movie_genere" : "Comedy|Crime|Mystery|Romance",
+        "production_year" : 2002,
+        "budget" : 11884
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b505"),
+        "id" : 92,
+        "movie_name" : "Love and Death on Long Island",
+        "movie_genere" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 13764
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b50b"),
+        "id" : 98,
+        "movie_name" : "Pressed",
+        "movie_genere" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2007,
+        "budget" : 15494
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b50c"),
+        "id" : 99,
+        "movie_name" : "Thousand Months, A (Mille mois)",
+        "movie_genere" : "Drama",
+        "production_year" : 2004,
+        "budget" : 17533
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b50e"),
+        "id" : 101,
+        "movie_name" : "Thor",
+        "movie_genere" : "Action|Adventure|Drama|Fantasy|IMAX",
+        "production_year" : 2003,
+        "budget" : 9337
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b512"),
+        "id" : 105,
+        "movie_name" : "Simpsons: The Longest Daycare, The",
+        "movie_genere" : "Animation|Comedy",
+        "production_year" : 2008,
+        "budget" : 17971
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b513"),
+        "id" : 106,
+        "movie_name" : "Scorpion King 3: Battle for Redemption, The",
+        "movie_genere" : "Action|Adventure|Comedy|Fantasy",
+        "production_year" : 2008,
+        "budget" : 12014
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b514"),
+        "id" : 107,
+        "movie_name" : "Asier ETA biok",
+        "movie_genere" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 12093
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b519"),
+        "id" : 112,
+        "movie_name" : "An American Tail: The Mystery of the Night Monster",
+        "movie_genere" : "Adventure|Animation|Children|Fantasy|Mystery|Sci-Fi",
+        "production_year" : 2004,
+        "budget" : 10392
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b51b"),
+        "id" : 114,
+        "movie_name" : "Money Money Money (L'aventure, c'est l'aventure)",
+        "movie_genere" : "Adventure|Comedy",
+        "production_year" : 2000,
+        "budget" : 11332
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b51c"),
+        "id" : 115,
+        "movie_name" : "Road to El Dorado, The",
+        "movie_genere" : "Animation|Children",
+        "production_year" : 2000,
+        "budget" : 17388
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b51d"),
+        "id" : 116,
+        "movie_name" : "Pornography (Pornografia)",
+        "movie_genere" : "Drama|Romance|War",
+        "production_year" : 2002,
+        "budget" : 11431
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b51e"),
+        "id" : 117,
+        "movie_name" : "Silver Bears",
+        "movie_genere" : "Comedy|Crime",
+        "production_year" : 2009,
+        "budget" : 10866
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b521"),
+        "id" : 120,
+        "movie_name" : "Bruiser",
+        "movie_genere" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 11781
+}
+{
+        "_id" : ObjectId("622aa65d6c8f88488823b522"),
+        "id" : 121,
+        "movie_name" : "John Garfield Story, The",
+        "movie_genere" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 15712
+}
+Type "it" for more
+
+//Sort all movies descending based on the production year and if the year is same then alphabetically for their movie_names
+
+ db.movies.find({},{_id:0,production_year:1,movie_name:1}).sort({production_year:-1,movie_name:1}).limit(20).pretty()
+{ "movie_name" : "Applause", "production_year" : 2020 }
+{
+        "movie_name" : "Celine: Through the Eyes of the World",
+        "production_year" : 2020
+}
+{ "movie_name" : "Couch Trip, The", "production_year" : 2020 }
+{ "movie_name" : "Damned the Day I Met You", "production_year" : 2020 }
+{ "movie_name" : "Fatal Beauty", "production_year" : 2020 }
+{ "movie_name" : "Gay Divorcee, The", "production_year" : 2020 }
+{
+        "movie_name" : "Judy Moody and the Not Bummer Summer",
+        "production_year" : 2020
+}
+{ "movie_name" : "La cravate", "production_year" : 2020 }
+{ "movie_name" : "Live Music", "production_year" : 2020 }
+{ "movie_name" : "Mating Season, The", "production_year" : 2020 }
+{ "movie_name" : "Mayday at 40,000 Feet!", "production_year" : 2020 }
+{ "movie_name" : "Mistaken for Strangers", "production_year" : 2020 }
+{ "movie_name" : "My Sucky Teen Romance", "production_year" : 2020 }
+{ "movie_name" : "Nazarin (Nazarín)", "production_year" : 2020 }
+{
+        "movie_name" : "Professor Layton and the Eternal Diva (Eiga Reiton-kyôju to eien no utahime)",
+        "production_year" : 2020
+}
+{ "movie_name" : "The Gilded Cage", "production_year" : 2020 }
+{ "movie_name" : "Threesome", "production_year" : 2020 }
+{ "movie_name" : "Yankee Doodle Dandy", "production_year" : 2020 }
+{ "movie_name" : "About Last Night", "production_year" : 2019 }
+{ "movie_name" : "Anything Else", "production_year" : 2019 }
+
+
+//in query 10 skip the first 10 entries and fetch the next 5
+> db.movies.find({},{id:1}).skip(10).limit(5).pretty()
+{ "_id" : ObjectId("622aa65d6c8f88488823b4b4"), "id" : 11 }
+{ "_id" : ObjectId("622aa65d6c8f88488823b4b5"), "id" : 12 }
+{ "_id" : ObjectId("622aa65d6c8f88488823b4b6"), "id" : 13 }
+{ "_id" : ObjectId("622aa65d6c8f88488823b4b7"), "id" : 14 }
+{ "_id" : ObjectId("622aa65d6c8f88488823b4b8"), "id" : 15 }
+
+
