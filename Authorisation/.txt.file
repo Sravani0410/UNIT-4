@@ -1,0 +1,37 @@
+1.Authentication
+   a.sign up - register
+   b.sign in -login
+ a.sign up/register:
+    1.email
+    2.password
+    3.name
+    4.address
+     -----abc@masai.com----//check if the mail is already registered,if yes,throw error;
+  b.sign in:
+    1.email --//check if the email exists/registerd,then 
+    2.password --//password is right or wrong
+
+ 2.--we won't store pwd in plain text ,we'll either Encrypt it or Hash it; -->external library bcrypt
+    //Registered or login 
+
+ email and password,can we just store the email and password
+ {
+     email:sandhya@gmail.com,
+     password:sandhya123;
+ }  
+
+encryted:
+
+ person a ="nffu" encrypted  --> key=-1;
+       a="yeh" -->key=reverse it;
+ person b ="meet"; decrypted
+        b="hey"
+
+hashing: -->you won't be able to decrypt it;
+"yeh"
+
+ 3.Tokens- login/signup ->server will send the token;  -->external library jsonwebtoken
+   token->abcd ->verifies ->we let the user in/perform 
+     
+
+      
