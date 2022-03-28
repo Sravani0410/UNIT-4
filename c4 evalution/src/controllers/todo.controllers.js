@@ -31,7 +31,7 @@ router.post("",async(req,res)=>{
         return res.status(400).send({message:err.message})
     }
 })
-router.patch("/users/:/id",async(req,res)=>{
+router.patch("/todo/:id",async(req,res)=>{
     try{
         const todo=await Todo.findByIdAndUpdate(req.params.id,req,body,{new:true})
         return res.status(200).send(todo)
@@ -40,7 +40,7 @@ router.patch("/users/:/id",async(req,res)=>{
         return res.status(400).send({message:err.message})
     }
 })
-router.delete("/users/:/id",async(req,res)=>{
+router.delete("/todo/:id",async(req,res)=>{
     try{
         const todo=await Todo.findByIdAndDelete(req.params.id).lean().exec()
         return res.status(200).send(todo)
