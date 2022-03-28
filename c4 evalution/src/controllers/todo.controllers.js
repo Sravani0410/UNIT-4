@@ -19,7 +19,7 @@ router.get("",async(req,res)=>{
         return res.status(200).send(todo)
     }
     catch(err){
-        return res.status(400).send({message:err.message})
+        return res.status(401).send({message:err.message})
     }
 })
 router.post("",async(req,res)=>{
@@ -28,7 +28,16 @@ router.post("",async(req,res)=>{
         return res.status(200).send(todo)
     }
     catch(err){
-        return res.status(400).send({message:err.message})
+        return res.status(401).send({message:err.message})
+    }
+})
+router.get("/todo/:id",async(req,res)=>{
+    try{
+        const todo=await Todo.findById(req.params.id).lean().exec()
+        return res.status(200).send(todo)
+    }
+    catch(err){
+        return res.status(401).send({message:err.message})
     }
 })
 router.patch("/todo/:id",async(req,res)=>{
@@ -37,7 +46,7 @@ router.patch("/todo/:id",async(req,res)=>{
         return res.status(200).send(todo)
     }
     catch(err){
-        return res.status(400).send({message:err.message})
+        return res.status(401).send({message:err.message})
     }
 })
 router.delete("/todo/:id",async(req,res)=>{
@@ -46,7 +55,7 @@ router.delete("/todo/:id",async(req,res)=>{
         return res.status(200).send(todo)
     }
     catch(err){
-        return res.status(400).send({message:err.message})
+        return res.status(401).send({message:err.message})
     }
 })
 module.exports=router;
