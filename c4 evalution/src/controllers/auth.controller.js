@@ -52,4 +52,4 @@ const login=async(req,res)=>{
     }
 }
 
-module.exports={register,login,generateToken}
+module.exports={register,login}
