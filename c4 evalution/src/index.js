@@ -7,7 +7,7 @@ const {register,login}=require("./controllers/auth.controller")
 const app=express();
 app.use(express.json());
 
-app.use("/users",userController)
+app.use("/user",userController)
 
 
 app.post("/register",register)
@@ -18,7 +18,7 @@ app.post("/login",login)
 
 app.listen(2299,async()=>{
     try{
-        await connectDb();
+        await connect();
         console.log("lisenting to port 2299")
     }
     catch(err){
